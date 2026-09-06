@@ -1,0 +1,13 @@
+# Local Python environments and caches
+ml_env/
+__pycache__/
+*.py[cod]
+.DS_Store
+.pytest_cache/
+
+# Secrets stay on the developer machine
+.env
+secrets_config.py
+
+# Generated project output
+correlation_plot.png
