@@ -6,9 +6,9 @@ This is a Python data-science project that analyzes Premier League team statisti
 
 **Interview introduction:**
 
-> I built an end-to-end exploratory data-analysis and machine-learning comparison project using Premier League team statistics. It cleans a messy CSV export, identifies statistics associated with finishing position, visualizes the findings, and compares equivalent PyTorch and TensorFlow regression models on a held-out test set.
+> I built an end-to-end Premier League forecasting project that combines exploratory analysis with season-aware machine learning. It cleans football data, identifies statistics associated with finishing position, validates equivalent PyTorch and TensorFlow models on a later unseen season, and forecasts the current table from the same Gameweek 5 cutoff.
 
-This is an educational ML project, not a production football-prediction system, because the supplied dataset contains only 20 complete team records.
+This is an educational ML project, not a production football-prediction system. The forecasting data contains 60 completed club-season records and 20 current-season forecast records, so uncertainty remains high.
 
 ## Technology stack
 
@@ -30,7 +30,9 @@ The current project is a command-line data-analysis project. It does not include
 ## Project files
 
 - `prem_analysis.py`: data cleaning, correlation analysis, and chart generation.
-- `proj.py`: PyTorch and TensorFlow model comparison.
+- `proj.py`: temporal validation and the PyTorch/TensorFlow current-season forecast.
+- `data/season_snapshots.csv`: completed 2023–24 through 2025–26 and current 2026–27 Gameweek 5 records.
+- `scripts/update_season_data.py`: reproducibly rebuilds season snapshots from match results.
 - `main_engine.py`: optional live standings API client.
 - `premstats.csv`: primary dataset used by the scripts.
 - `premstats.xlsx`: duplicate/reference dataset; the scripts use the CSV.
@@ -74,43 +76,39 @@ The script creates `correlation_plot.png`, showing the ten statistics most negat
 
 > The analysis shows association, not causation. For example, scoring more goals is strongly associated with a better rank, but correlation alone does not prove that any single feature causes league success.
 
-## Machine-learning pipeline
+## Season-aware forecasting pipeline
 
-The regression models use these nine features:
+Every club is measured after its first five matches. The model uses these per-game features:
 
 ```text
-goals
-xg
-shots
-shots_on_target
-Poss
-Total Touches
-Successful Dribbles
-TotDist Carried
-PrgC
+points per game
+goal difference per game
+shot difference per game
+shots-on-target difference per game
 ```
 
-The target variable is final `rank`.
+The target is the club's eventual final rank for completed seasons. The current season intentionally has no target.
 
 Workflow:
 
-1. Clean the source data.
-2. Remove records with missing required features.
-3. Split data into 80% training and 20% testing records.
-4. Standardize features with scikit-learn's `StandardScaler`.
-5. Fit the scaler on training data only.
-6. Transform both training and test data with that fitted scaler.
-7. Train equivalent PyTorch and TensorFlow regression networks.
-8. Evaluate both models on held-out teams with Mean Absolute Error (MAE).
+1. Download season match results from football-data.co.uk.
+2. Build a league table after every club has played five matches.
+3. Build the completed final table and attach final ranks as targets.
+4. Train on the 2023–24 and 2024–25 Gameweek 5 snapshots.
+5. Validate on the later, completely unseen 2025–26 season.
+6. Report MAE for the raw Gameweek 5 table, PyTorch, TensorFlow, and their ensemble.
+7. Retrain on all three completed seasons.
+8. Forecast 2026–27 from its Gameweek 5 snapshot.
+9. Convert continuous predictions into unique positions from 1–20.
 
-Fitting the scaler only on training data prevents data leakage: the model does not use information from the test set while learning feature scaling.
+Fitting the scaler only on historical training records prevents feature-scaling leakage. Keeping the validation season later than the training season is also more realistic than randomly mixing clubs from the same season across train and test sets.
 
 ## Neural-network comparison
 
 Both frameworks use comparable model structures:
 
 ```text
-9 input features
+4 input features
 → Dense layer: 16 neurons + ReLU
 → Dense layer: 8 neurons + ReLU
 → Output layer: 1 predicted rank
@@ -121,10 +119,10 @@ Both models use:
 - Regression output because final rank is numeric.
 - Mean Squared Error loss during training.
 - Adam optimizer.
-- 200 epochs.
+- 300 epochs.
 - Fixed random seeds for more reproducible results.
 
-The evaluation metric is MAE, reported in league places. An MAE of `4.76`, for example, means predictions were off by about 4.76 final league positions on average for the held-out teams.
+The evaluation metric is MAE, reported in league places. An MAE of `4.00`, for example, means predictions were off by four final positions on average across the held-out season.
 
 ## Testing and demo
 
@@ -149,14 +147,18 @@ For a short live demo:
 2. Run `python prem_analysis.py`.
 3. Open `correlation_plot.png` and explain the results.
 4. Run `python proj.py`.
-5. Explain the held-out predictions and MAE values.
+5. Explain the 2025–26 temporal-validation MAE and the 2026–27 forecast.
 6. State the limitations honestly.
 
 The test suite verifies:
 
 - The loader removes blank rows and export-artifact columns.
 - The analysis produces correlations and writes a chart.
-- Model-preparation code produces valid feature matrices and matching held-out team labels.
+- The season file contains three completed seasons and one target-free current season.
+- All clubs are compared at the same five-match cutoff.
+- Temporal splitting keeps the newer completed season out of training.
+- Continuous model scores convert into unique league positions.
+- Match aggregation calculates points and goal difference correctly.
 
 The tests intentionally do not train neural networks or call external APIs, keeping them quick and independent of network access or credentials.
 
@@ -175,13 +177,14 @@ The live API module currently fetches standings only. It does not automatically 
 
 ## Limitations
 
-- The dataset has only 20 complete records.
-- The held-out test set is approximately four teams, which is too small for strong performance claims.
+- Only three completed seasons are available, giving 60 labeled club-season records.
+- Temporal validation has only one season, so results may change substantially with more history.
 - Neural networks may not be the best model type for such a small tabular dataset.
 - The data is observational, so correlation is not causation.
 - Rank is modeled as a continuous value even though final rank is an ordered integer.
 - A live prediction system would need a richer data source for all model features.
-- The project uses one random split; cross-validation would give more stable evaluation.
+- Five matches is an extremely early and noisy point in a season.
+- Promoted teams have no Premier League history in the training file.
 
 ## Interview questions and answers
 
@@ -199,19 +202,19 @@ The live API module currently fetches standings only. It does not automatically 
 
 ### How did you avoid data leakage?
 
-> I split the records before scaling and fit `StandardScaler` only on the training partition. I then used that fitted scaler to transform the test partition, so no test-data distribution information enters training.
+> I use time-aware validation. The model trains on 2023–24 and 2024–25, then validates on the later 2025–26 season. `StandardScaler` is fitted only on historical training seasons, so the validation distribution does not enter training. The current season has no final-rank target and is used only after evaluation.
 
 ### How did you evaluate the models?
 
-> I evaluated predictions on held-out teams using Mean Absolute Error, expressed in league positions. Because the dataset is small, I present it as a framework comparison and educational result rather than a reliable real-world forecast.
+> I evaluate the models on an entire later season using Mean Absolute Error in league positions. I also compare them with the actual Gameweek 5 table as a transparent baseline. That shows whether the neural networks add value instead of reporting model scores in isolation.
 
 ### What would you improve next?
 
-> I would collect multiple seasons of data, add cross-validation, and compare neural networks with simpler baselines such as linear regression, random forest, and gradient boosting. I would add per-match feature engineering, experiment tracking, and a richer data source for live features. Finally, I would expose the analysis through a dashboard or API.
+> I would add five to ten more historical seasons and use rolling-origin validation, where each season is predicted only from earlier seasons. I would compare the neural networks with ordinal regression, random forest, and gradient boosting, add strength-of-schedule features, and produce prediction intervals rather than only point estimates.
 
 ## Résumé description
 
-> Built a Python Premier League analytics project using Pandas, Matplotlib, scikit-learn, PyTorch, and TensorFlow. Developed a robust CSV-cleaning pipeline, correlation-based exploratory analysis, reproducible train/test evaluation, and comparative neural-network regression models. Added automated tests, dependency documentation, and environment-based API credential handling.
+> Built a season-aware Premier League forecasting project using Pandas, Matplotlib, scikit-learn, PyTorch, and TensorFlow. Engineered comparable Gameweek 5 features from match-level data, implemented temporal validation against a later season, and generated a current-season ensemble table. Added reproducible data refresh, automated pipeline tests, and secure environment-based API handling.
 
 ## Presentation guidance
 

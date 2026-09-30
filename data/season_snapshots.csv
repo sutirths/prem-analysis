@@ -1,0 +1,81 @@
+season,season_status,team,snapshot_rank,played,wins,draws,losses,goals_for,goals_against,goal_difference,points,shots_for,shots_against,shots_on_target_for,shots_on_target_against,xg_for,xg_against,final_rank,source_url
+2023-24,complete,Man City,1,5,5,0,0,14,3,11,15,97,31,41,11,,,1,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Tottenham,2,5,4,1,0,13,5,8,13,100,67,38,24,,,5,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Liverpool,3,5,4,1,0,12,4,8,13,81,66,25,22,,,3,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Arsenal,4,5,4,1,0,9,4,5,13,78,46,30,10,,,2,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Brighton,5,5,4,0,1,15,7,8,12,93,60,44,17,,,11,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,West Ham,6,5,3,1,1,10,7,3,10,55,101,18,35,,,9,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Aston Villa,7,5,3,0,2,11,10,1,9,70,58,27,24,,,4,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Nott'm Forest,8,5,2,1,2,7,7,0,7,52,71,17,24,,,17,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Crystal Palace,9,5,2,1,2,6,7,-1,7,75,62,29,14,,,10,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Fulham,10,5,2,1,2,5,10,-5,7,46,69,13,35,,,14,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Brentford,11,5,1,3,1,8,6,2,6,72,64,24,20,,,16,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Newcastle,12,5,2,0,3,8,7,1,6,65,65,26,22,,,7,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Man United,13,5,2,0,3,6,10,-4,6,79,76,24,29,,,8,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Chelsea,14,5,1,2,2,5,5,0,5,81,56,24,15,,,6,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Burnley,15,5,1,1,3,6,13,-7,4,55,85,14,31,,,19,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Bournemouth,16,5,0,3,2,4,8,-4,3,63,94,22,32,,,13,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Wolves,17,5,1,0,4,5,11,-6,3,73,78,19,35,,,15,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Sheffield United,18,5,0,1,4,5,9,-4,1,41,114,19,37,,,20,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Everton,19,5,0,1,4,2,9,-7,1,67,59,25,23,,,12,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2023-24,complete,Luton,20,5,0,0,5,3,12,-9,0,61,82,10,29,,,18,https://www.football-data.co.uk/mmz4281/2324/E0.csv
+2024-25,complete,Man City,1,5,4,1,0,13,5,8,13,99,34,36,14,,,3,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Liverpool,2,5,4,0,1,10,1,9,12,81,47,34,16,,,1,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Aston Villa,3,5,4,0,1,10,7,3,12,62,48,23,16,,,6,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Arsenal,4,5,3,2,0,8,3,5,11,50,90,24,26,,,2,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Chelsea,5,5,3,1,1,11,5,6,10,59,66,26,26,,,4,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Newcastle,6,5,3,1,1,7,6,1,10,55,89,19,30,,,5,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Brighton,7,5,2,3,0,8,4,4,9,81,41,23,16,,,8,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Nott'm Forest,8,5,2,3,0,6,4,2,9,62,57,27,16,,,7,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Fulham,9,5,2,2,1,7,5,2,8,80,61,28,20,,,11,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Tottenham,10,5,2,1,2,9,5,4,7,86,39,35,17,,,17,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Man United,11,5,2,1,2,5,5,0,7,68,50,28,18,,,15,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Brentford,12,5,2,0,3,7,9,-2,6,51,92,25,37,,,10,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Bournemouth,13,5,1,2,2,5,8,-3,5,84,75,28,37,,,9,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,West Ham,14,5,1,1,3,5,9,-4,4,68,85,18,23,,,14,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Leicester,15,5,0,3,2,6,8,-2,3,47,79,16,27,,,18,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Crystal Palace,16,5,0,3,2,4,7,-3,3,66,64,19,25,,,12,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Ipswich,17,5,0,3,2,3,8,-5,3,38,73,14,23,,,19,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Southampton,18,5,0,1,4,2,9,-7,1,59,79,18,32,,,20,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Everton,19,5,0,1,4,5,14,-9,1,59,69,17,29,,,13,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2024-25,complete,Wolves,20,5,0,1,4,5,14,-9,1,54,71,19,29,,,16,https://www.football-data.co.uk/mmz4281/2425/E0.csv
+2025-26,complete,Liverpool,1,5,5,0,0,11,5,6,15,71,43,24,9,,,5,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Arsenal,2,5,3,1,1,10,2,8,10,66,44,17,15,,,1,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Tottenham,3,5,3,1,1,10,3,7,10,58,63,20,22,,,17,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Bournemouth,4,5,3,1,1,6,5,1,10,68,40,20,15,,,6,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Crystal Palace,5,5,2,3,0,6,2,4,9,58,55,21,11,,,15,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Chelsea,6,5,2,2,1,10,5,5,8,65,53,23,19,,,10,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Sunderland,7,5,2,2,1,6,4,2,8,51,52,13,18,,,7,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Fulham,8,5,2,2,1,6,5,1,8,50,51,15,19,,,11,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Man City,9,5,2,1,2,9,5,4,7,55,57,20,20,,,2,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Everton,10,5,2,1,2,6,5,1,7,57,64,12,15,,,13,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Man United,11,5,2,1,2,6,8,-2,7,81,46,22,17,,,3,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Leeds,12,5,2,1,2,4,7,-3,7,50,54,12,17,,,14,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Newcastle,13,5,1,3,1,3,3,0,6,54,37,13,13,,,12,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Brighton,14,5,1,2,2,6,8,-2,5,53,54,21,16,,,8,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Nott'm Forest,15,5,1,2,2,5,9,-4,5,53,58,18,25,,,16,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Burnley,16,5,1,1,3,5,8,-3,4,42,95,14,25,,,19,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Brentford,17,5,1,1,3,6,10,-4,4,41,70,16,19,,,9,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Aston Villa,18,5,0,3,2,1,5,-4,3,52,65,12,15,,,4,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,West Ham,19,5,1,0,4,5,13,-8,3,51,65,23,23,,,18,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2025-26,complete,Wolves,20,5,0,0,5,3,12,-9,0,51,61,17,20,,,20,https://www.football-data.co.uk/mmz4281/2526/E0.csv
+2026-27,current,Man City,1,5,5,0,0,13,5,8,15,68,59,27,20,10.610,7.230,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Arsenal,2,5,4,0,1,8,4,4,12,65,53,24,14,8.490,4.020,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Brighton,3,5,3,1,1,16,5,11,10,95,58,29,19,11.480,8.680,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Brentford,4,5,2,3,0,10,4,6,9,81,67,23,23,9.790,6.310,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Leeds,5,5,2,3,0,7,3,4,9,61,73,18,21,7.620,6.330,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Liverpool,6,5,2,3,0,7,4,3,9,76,58,24,18,8.340,6.100,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Everton,7,5,2,3,0,6,3,3,9,80,69,23,18,7.320,6.930,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Hull,8,5,2,2,1,6,4,2,8,61,69,19,21,5.280,7.380,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Newcastle,9,5,2,2,1,9,9,0,8,51,98,18,28,5.320,8.890,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Chelsea,10,5,2,1,2,10,12,-2,7,72,72,26,32,6.770,8.830,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Ipswich,11,5,2,0,3,7,11,-4,6,58,86,23,28,7.690,8.750,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Man United,12,5,1,2,2,8,8,0,5,113,53,28,23,9.680,6.750,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Nott'm Forest,13,5,1,2,2,4,5,-1,5,82,52,17,15,7.260,4.780,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Sunderland,14,5,1,1,3,6,10,-4,4,66,60,25,16,9.760,8.650,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Crystal Palace,15,5,1,1,3,6,11,-5,4,53,84,18,28,6.260,9.460,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Aston Villa,16,5,1,1,3,4,9,-5,4,48,81,12,26,4.510,9.230,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Bournemouth,17,5,0,3,2,6,8,-2,3,68,54,26,20,6.690,7.060,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Coventry,18,5,1,0,4,1,10,-9,3,51,87,16,22,4.860,8.630,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Fulham,19,5,0,2,3,5,8,-3,2,72,83,22,24,7.740,8.570,,https://www.football-data.co.uk/mmz4281/2627/E0.csv
+2026-27,current,Tottenham,20,5,0,2,3,2,8,-6,2,71,76,19,21,4.930,7.820,,https://www.football-data.co.uk/mmz4281/2627/E0.csv

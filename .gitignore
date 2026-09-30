@@ -1,5 +1,6 @@
 # Local Python environments and caches
 ml_env/
+.venv/
 __pycache__/
 *.py[cod]
 .DS_Store
@@ -11,3 +12,4 @@ secrets_config.py
 
 # Generated project output
 correlation_plot.png
+data/raw/
